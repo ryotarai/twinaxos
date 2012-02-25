@@ -14,10 +14,6 @@ searchNaxosFromTwitter = ()->
 
 processResult = (json) ->
   $('#entries').html('')
-  baseurl = $.cookie('base_url')
-  if baseurl is null
-    baseurl = 'http://ml.naxos.jp/album/'
-
   $.each(json.results, () ->
     for u in this.entities.urls
       if u.expanded_url.match(/ml.naxos.jp\/album\/([\w\.\-]+)/)

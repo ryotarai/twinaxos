@@ -20,7 +20,10 @@
   };
 
   processResult = function(json) {
+    var baseurl;
     $('#entries').html('');
+    baseurl = $.cookie('base_url');
+    if (baseurl === null) baseurl = 'http://ml.naxos.jp/album/';
     return $.each(json.results, function() {
       var a, box, id, img, retried, twText, u, _i, _len, _ref, _results;
       _ref = this.entities.urls;
