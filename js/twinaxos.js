@@ -23,7 +23,7 @@
     var baseurl;
     $('#entries').html('');
     baseurl = $.cookie('base_url');
-    if (baseurl === null) baseurl = 'http://ml.naxos.jp/album/';
+    if (baseurl === null) baseurl = 'http://ml.naxos.jp/';
     return $.each(json.results, function() {
       var a, box, id, img, retried, twText, u, _i, _len, _ref, _results;
       _ref = this.entities.urls;
@@ -36,7 +36,7 @@
           retried = false;
           id = RegExp.$1;
           box = $('<div>').attr('style', 'float:left; height:380px;');
-          a = $('<a/>').attr('href', "" + baseurl + id);
+          a = $('<a/>').attr('href', "" + baseurl + "album/" + id);
           a.attr('target', '_blank');
           twText = $('<p>');
           twText.attr('style', 'width: 280px;height:70px; font-size:9px; text-overflow:ellipsis; overflow:hidden;');
