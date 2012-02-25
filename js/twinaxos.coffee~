@@ -16,7 +16,7 @@ processResult = (json) ->
   $('#entries').html('')
   baseurl = $.cookie('base_url')
   if baseurl is null
-    baseurl = 'http://ml.naxos.jp/album/'
+    baseurl = 'http://ml.naxos.jp/'
 
   $.each(json.results, () ->
     for u in this.entities.urls
@@ -26,7 +26,7 @@ processResult = (json) ->
         retried = false
         id = RegExp.$1
         box = $('<div>').attr('style', 'float:left; height:380px;')
-        a = $('<a/>').attr('href', "#{baseurl}#{id}")
+        a = $('<a/>').attr('href', "#{baseurl}album/#{id}")
         a.attr('target', '_blank')
         twText = $('<p>')
         twText.attr('style', 'width: 280px;height:70px; font-size:9px; text-overflow:ellipsis; overflow:hidden;')

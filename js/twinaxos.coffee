@@ -56,6 +56,6 @@ $( ->
   console.log($.cookie('base_url'))
   $('#myModal .modal-footer a[class*="btn-primary"]').click(->
     baseurl = $('#base-url').val()
-    $.cookie('base_url', baseurl, expires:365, path:'/')
+    $.cookie('base_url', baseurl, expires:365)
   )
 )

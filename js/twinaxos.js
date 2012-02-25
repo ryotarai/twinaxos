@@ -72,8 +72,7 @@
       var baseurl;
       baseurl = $('#base-url').val();
       return $.cookie('base_url', baseurl, {
-        expires: 365,
-        path: '/'
+        expires: 365
       });
     });
   });
