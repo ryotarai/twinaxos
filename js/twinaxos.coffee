@@ -26,7 +26,7 @@ processResult = (json) ->
         retried = false
         id = RegExp.$1
         box = $('<div>').attr('style', 'float:left; height:380px;')
-        a = $('<a/>').attr('href', u.expanded_url)
+        a = $('<a/>').attr('href', "#{baseurl}#{id}")
         a.attr('target', '_blank')
         twText = $('<p>')
         twText.attr('style', 'width: 280px;height:70px; font-size:9px; text-overflow:ellipsis; overflow:hidden;')
